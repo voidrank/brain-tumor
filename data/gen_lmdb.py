@@ -34,7 +34,7 @@ def make_lmdb_input(lmdbname, channel_directories, range_set):
             datum.width = X.shape[3]
             for j in range(len(channel_directories)):
                 dirname = channel_directories[j]
-                X[count][j] = np.asarray(PIL.Image.open(os.path.join(dirname, filename)), dtype=np.double) / 255
+                X[count][j] = np.asarray(PIL.Image.open(os.path.join(dirname, filename)), dtype=np.double)
             datum.data = X[count].tobytes()
             str_id = '{:08}'.format(count)
             txn.put(str_id.encode("ascii"), datum.SerializeToString())
