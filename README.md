@@ -47,6 +47,9 @@
 
 ![image](result.png)
 
+## 实验结果纠正
+由于不当使用caffe的原因，结果并不正确。（有空再来改改）
+
 ## 其他
 
 本实验采用[caffe](https://github.com/BVLC/caffe)深度学习框架  
